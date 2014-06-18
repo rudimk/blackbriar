@@ -1,4 +1,5 @@
 Blackbriar::Application.routes.draw do
+  get "landings/index"
   resources :blueprints
 
   resources :harbors
