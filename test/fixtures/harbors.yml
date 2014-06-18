@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  process_id: MyString
+  name: MyString
+  subdomain: MyString
+  port: MyString
+  user_id: 
+  password: MyString
+  state: false
+
+two:
+  process_id: MyString
+  name: MyString
+  subdomain: MyString
+  port: MyString
+  user_id: 
+  password: MyString
+  state: false
