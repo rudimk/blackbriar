@@ -1,6 +1,5 @@
-<h1>Editing harbor</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @harbor %> |
-<%= link_to 'Back', harbors_path %>
+<%- model_class = Harbor -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Harbor %></h1>
+</div>
+<%= render :partial => 'form' %>

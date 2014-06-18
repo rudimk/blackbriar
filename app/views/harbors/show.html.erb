@@ -1,39 +1,34 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Harbor -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Harbor %></h1>
+</div>
 
-<p>
-  <strong>Process:</strong>
-  <%= @harbor.process_id %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:process_id) %></dt>
+      <dd><pre class="prettyprint"><%= @harbor.process_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:name) %></dt>
+      <dd><pre class="prettyprint"><%= @harbor.name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:subdomain) %></dt>
+      <dd><pre class="prettyprint"><%= @harbor.subdomain %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:port) %></dt>
+      <dd><pre class="prettyprint"><%= @harbor.port %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:password) %></dt>
+      <dd><pre class="prettyprint"><%= @harbor.password %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:state) %></dt>
+      <dd><pre class="prettyprint"><%= @harbor.state %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @harbor.name %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              harbors_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_harbor_path(@harbor), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              harbor_path(@harbor),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Subdomain:</strong>
-  <%= @harbor.subdomain %>
-</p>
-
-<p>
-  <strong>Port:</strong>
-  <%= @harbor.port %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @harbor.user %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @harbor.password %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @harbor.state %>
-</p>
-
-<%= link_to 'Edit', edit_harbor_path(@harbor) %> |
-<%= link_to 'Back', harbors_path %>
