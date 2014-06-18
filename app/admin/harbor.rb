@@ -1,4 +1,5 @@
 ActiveAdmin.register Harbor do
+  permit_params :process_id, :name, :subdomain, :port, :password, :state
 
   
   # See permitted parameters documentation:
