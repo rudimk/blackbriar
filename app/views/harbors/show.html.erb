@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Process:</strong>
+  <%= @harbor.process_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @harbor.name %>
+</p>
+
+<p>
+  <strong>Subdomain:</strong>
+  <%= @harbor.subdomain %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @harbor.port %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @harbor.user %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @harbor.password %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @harbor.state %>
+</p>
+
+<%= link_to 'Edit', edit_harbor_path(@harbor) %> |
+<%= link_to 'Back', harbors_path %>
